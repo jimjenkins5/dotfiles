@@ -1,0 +1,20 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Jim Jenkins
+	email = jimjenkins5@gmail.com
+[http]
+[https]
+[push]
+	default = simple
+[core]
+	excludesfile = ~/.gitignore
+[credential]
+	helper = !aws codecommit credential-helper $@
+	UseHttpPath = true
+[diff]
+        tool = vimdiff
+[merge]
+        tool = vimdiff
+        conflictstyle = diff3
+[mergetool]
+        prompt = false
