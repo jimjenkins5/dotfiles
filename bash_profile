@@ -4,6 +4,11 @@ if [ -f ~/.bash_aliases ]; then
    . ~/.bash_aliases
 fi
 
+# Load bash aliases that won't be copied to the git repo
+if [ -f ~/.bash_aliases_local ]; then
+   . ~/.bash_aliases_local
+fi
+
 if [ -f ~/.bashrc ]; then
    . ~/.bashrc
 fi
