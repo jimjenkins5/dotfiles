@@ -34,6 +34,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'ervandew/supertab'
 Plug 'posva/vim-vue'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 
 " Syntax Files
 Plug 'phalkunz/vim-ss'
@@ -41,6 +42,8 @@ Plug 'ericpruitt/tmux.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'alunny/pegjs-vim'
+Plug 'posva/vim-vue'
+Plug 'plasticboy/vim-markdown'
 
 " Color Schemes
 Plug 'rafi/awesome-vim-colorschemes'
