@@ -6,7 +6,12 @@ set shiftwidth=3
 set noswapfile
 set nobackup
 set mouse=a
-set clipboard=unnamed
+if has("clipboard")
+  set clipboard+=unnamed " copy to the system clipboard
+  if has("unnamedplus") " X11 support
+    set clipboard+=unnamedplus
+  endif
+endif
 set backspace=indent,eol,start
 set pastetoggle=<leader>p
 highlight ColorColumn ctermbg=1
