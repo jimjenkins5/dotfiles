@@ -77,6 +77,7 @@ colorscheme jellybeans
 
 let g:SuperTabDefaultCompletionType = "context"
 let g:jsx_ext_required = 0
+let g:vim_markdown_folding_disabled = 1
 
 if has("win32") && !has("gui_running")
    " windows console doesn't look good with gruvbox because it's 16 colors
