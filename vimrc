@@ -84,6 +84,12 @@ let g:SuperTabDefaultCompletionType = "context"
 let g:jsx_ext_required = 0
 let g:vim_markdown_folding_disabled = 1
 
+" indent contents of various html tags that I consider 'block' tags
+let g:html_indent_style = "inc"
+:let g:html_indent_inctags = "html,head,body,p,tbody,article"
+
+
+
 if has("win32") && !has("gui_running")
    " windows console doesn't look good with gruvbox because it's 16 colors
    set background=dark
