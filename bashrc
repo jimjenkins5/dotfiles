@@ -173,3 +173,10 @@ export PS1="$ps1_username_color\`get_user_name_if_different\`\h:$ps1_dir_color\W
 export NVM_DIR=$HOME/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /home/jpjenkins/.nvm/versions/node/v6.11.5/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash ] && . /home/jpjenkins/.nvm/versions/node/v6.11.5/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /home/jpjenkins/.nvm/versions/node/v6.11.5/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash ] && . /home/jpjenkins/.nvm/versions/node/v6.11.5/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash
