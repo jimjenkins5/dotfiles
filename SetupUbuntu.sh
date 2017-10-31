@@ -13,8 +13,11 @@ sudo make install
 cd ~ && rm -rf ~/tmux-2.6
 
 # nvm install
-curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
 nvm install lts/* && nvm use lts/*
+
+# standard global npm packages
+npm i -g serverless grunt webpack
 
 # mysql
 export DEBIAN_FRONTEND=noninteractive
