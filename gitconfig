@@ -3,7 +3,9 @@
 	name = Jim Jenkins
 	email = jimjenkins5@gmail.com
 [http]
+	sslVerify = false
 [https]
+	sslVerify = false
 [push]
 	default = simple
 [core]
@@ -18,3 +20,5 @@
         conflictstyle = diff3
 [mergetool]
         prompt = false
+[core]
+	excludesfile = /home/jpjenkins/.gitignore_global
