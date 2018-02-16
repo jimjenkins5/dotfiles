@@ -59,6 +59,10 @@ if [ -f ~/.git-completion.bash ]; then
    . ~/.git-completion.bash
 fi
 
+# Load bash aliases that won't be copied to the git repo
+if [ -f ~/.bash_aliases_local ]; then
+    source ~/.bash_aliases_local
+fi
 
 rmcache () {
    pushd ~/jworg-cs/content-core/
