@@ -177,10 +177,3 @@ nvm() {
    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
    nvm "${@}"
 }
-
-# This loads nvm bash_completio tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[ -f /home/jpjenkins/.nvm/versions/node/v6.11.5/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash ] && . /home/jpjenkins/.nvm/versions/node/v6.11.5/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[ -f /home/jpjenkins/.nvm/versions/node/v6.11.5/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash ] && . /home/jpjenkins/.nvm/versions/node/v6.11.5/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash
