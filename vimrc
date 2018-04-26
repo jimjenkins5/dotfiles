@@ -73,7 +73,12 @@ nnoremap <C-L> <C-W><C-L>
 inoremap ii <esc>
 noremap # :set invnumber<CR>
 map <leader>\ gcc
+nmap <leader>s :set spell!<CR>
 " END KEY MAPPINGS
+
+" SPELLCHECK
+set spelllang=en_us
+" END SPELLCHECK
 
 " COLORSCHEME
 set background=dark
