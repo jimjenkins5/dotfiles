@@ -162,7 +162,7 @@ ps1_dir_color="\[\033[38;5;33m\]"
 ps1_branch_color="\[\033[38;5;245m\]"
 ps1_no_color="\[\e[m\]"
 
-export PS1="$ps1_username_color\`get_user_name_if_different\`\h:$ps1_dir_color\W$ps1_branch_color\`parse_git_branch\`$ps1_no_color\\$ "
+export PS1="$ps1_username_color\`get_user_name_if_different\`\h:$ps1_dir_color\W$ps1_branch_color\`parse_git_branch\` $ps1_no_color\t \$ "
 
 ###################################################################
 #                   End My Awesome Prompt                         #
@@ -177,3 +177,4 @@ nvm() {
    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
    nvm "${@}"
 }
+export PATH=${PATH}:./node_modules/.bin
