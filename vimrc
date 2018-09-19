@@ -32,14 +32,17 @@ else
    call plug#begin('~/.vim/plugged')
 endif
 
+" Set the timeout for vim-plug to be really high so YouCompleteMe will install
+let g:plug_timeout=300
+
 Plug 'VundleVim/Vundle.vim'
 
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'ervandew/supertab'
 Plug 'posva/vim-vue'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 " Syntax Files
 Plug 'phalkunz/vim-ss'
@@ -50,11 +53,21 @@ Plug 'alunny/pegjs-vim'
 Plug 'posva/vim-vue'
 Plug 'plasticboy/vim-markdown'
 
+" TypeScript
+Plug 'HerringtonDarkholme/yats'
+Plug 'quramy/tsuquyomi'
+
 " Color Schemes
 Plug 'rafi/awesome-vim-colorschemes'
 
 call plug#end()
 " END PLUGIN SETUP
+
+" YouCompleteMe TypeScript integration
+if !exists("g:ycm_semantic_triggers")
+   let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers['typescript'] = ['.']
 
 " IGNORE DIRECTORIES FOR ctrlp AND OTHERS
 set wildignore+=*/.git/*,*/node_modules/*,*/DS_STORE/*,*/coverage/*,*.swp
