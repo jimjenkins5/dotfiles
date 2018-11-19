@@ -35,8 +35,7 @@ endif
 " Set the timeout for vim-plug to be really high so YouCompleteMe will install
 let g:plug_timeout=300
 
-Plug 'VundleVim/Vundle.vim'
-
+Plug 'editorconfig/editorconfig-vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'posva/vim-vue'

@@ -178,3 +178,10 @@ nvm() {
    nvm "${@}"
 }
 export PATH=${PATH}:./node_modules/.bin
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /mnt/c/dev/bethel/digital-publishing-services/node_modules/tabtab/.completions/serverless.bash ] && . /mnt/c/dev/bethel/digital-publishing-services/node_modules/tabtab/.completions/serverless.bash
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /mnt/c/dev/bethel/digital-publishing-services/node_modules/tabtab/.completions/sls.bash ] && . /mnt/c/dev/bethel/digital-publishing-services/node_modules/tabtab/.completions/sls.bash
