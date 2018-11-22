@@ -55,10 +55,6 @@ if [ -f ~/.bash_aliases ]; then
    . ~/.bash_aliases
 fi
 
-if [ -f ~/.git-completion.bash ]; then
-   . ~/.git-completion.bash
-fi
-
 # Load bash aliases that won't be copied to the git repo
 if [ -f ~/.bash_aliases_local ]; then
     source ~/.bash_aliases_local
@@ -167,6 +163,11 @@ export PS1="$ps1_username_color\`get_user_name_if_different\`\h:$ps1_dir_color\W
 ###################################################################
 #                   End My Awesome Prompt                         #
 ###################################################################
+
+# Git bash completion
+if [ -x $HOME/dotfiles/.git-autocomplete.sh ]; then
+   source $HOME/dotfiles/.git-autocomplete.sh;
+fi
 
 export NVM_DIR="$HOME/.nvm"
 export PATH=$NVM_DIR/current/bin:$PATH
