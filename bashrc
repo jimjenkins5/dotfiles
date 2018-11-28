@@ -160,6 +160,8 @@ ps1_no_color="\[\e[m\]"
 
 export PS1="$ps1_username_color\`get_user_name_if_different\`\h:$ps1_dir_color\W$ps1_branch_color\`parse_git_branch\`$ps1_no_color\\$ "
 
+export GOPATH="$HOME/go"
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 ###################################################################
 #                   End My Awesome Prompt                         #
 ###################################################################
