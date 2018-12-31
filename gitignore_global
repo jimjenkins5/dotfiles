@@ -2,3 +2,10 @@
 .vscode
 *.swp
 
+# OS Specific Files
+.DS_STORE
+.DS_Store?
+.Trashes
+ehthumbs.db
+Thumbs.db
+

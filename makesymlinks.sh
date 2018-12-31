@@ -29,3 +29,6 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
+
+# ensure that the global gitignore setting is correct (it's an absolute value)
+git config --global core.excludesfile ~/.gitignore_global
