@@ -1,23 +1,14 @@
 sudo apt-get update && sudo apt-get upgrade -y
 
 # miscellaneous packages for stuff and things
-sudo apt-get -qy install build-essential libevent-dev libncurses5-dev
-
-# tmux 2.6
-cd ~
-wget https://github.com/tmux/tmux/releases/download/2.6/tmux-2.6.tar.gz
-tar -xzf tmux-2.6.tar.gz
-cd ~/tmux-2.6/
-./configure && make
-sudo make install
-cd ~ && rm -rf ~/tmux-2.6
+sudo apt-get -qy install build-essential python-dev cmake jq
 
 # nvm install
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
-nvm install lts/* && nvm use lts/*
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+nvm install v8.10.0 && nvm use lts/*
 
 # standard global npm packages
-npm i -g serverless grunt webpack
+npm i -g npm@6.4.1 serverless
 
 # mysql
 export DEBIAN_FRONTEND=noninteractive
