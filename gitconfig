@@ -5,4 +5,4 @@
 [push]
 	default = simple
 [core]
-	excludesfile = /home/jpjenkins/.gitignore_global
+	excludesfile = /Users/jpjenkins/.gitignore_global

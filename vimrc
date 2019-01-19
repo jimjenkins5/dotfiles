@@ -84,8 +84,9 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 inoremap ii <esc>
 noremap # :set invnumber<CR>
-map <leader>\ gcc
+map <leader>\ gcc<CR>
 nmap <leader>s :set spell!<CR>
+noremap <leader>f :%!python -m json.tool<CR>
 " END KEY MAPPINGS
 
 " SPELLCHECK

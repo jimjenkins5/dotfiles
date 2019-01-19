@@ -24,4 +24,10 @@ slsLogs ()
     sls logs -t -f "${LOGS_FN}" --startTime "$(gdate -u +'%Y-%m-%dT%H:%M:%SZ' -d '3 min ago')" $@
 }
 
+function docker-tags() {
+   curl https://registry.hub.docker.com/v1/repositories/$1/tags | jq -r '.[].name';
+}
+
 alias gruntw="grunt && grunt watch"
+
+alias https="http --default-scheme=https"

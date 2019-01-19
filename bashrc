@@ -162,6 +162,7 @@ export PS1="$ps1_username_color\`get_user_name_if_different\`\h:$ps1_dir_color\W
 
 export GOPATH="$HOME/go"
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+export PATH=$PATH:"$HOME/Library/Python/2.7/bin"
 ###################################################################
 #                   End My Awesome Prompt                         #
 ###################################################################
