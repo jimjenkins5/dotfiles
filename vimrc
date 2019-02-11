@@ -41,7 +41,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'posva/vim-vue'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'ajh17/VimCompletesMe'
 
 " Syntax Files
 Plug 'phalkunz/vim-ss'
