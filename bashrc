@@ -163,6 +163,7 @@ export PS1="$ps1_username_color\`get_user_name_if_different\`\h:$ps1_dir_color\W
 export GOPATH="$HOME/go"
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 export PATH=$PATH:"$HOME/Library/Python/2.7/bin"
+export PATH=$PATH:"./node_modules/.bin"
 ###################################################################
 #                   End My Awesome Prompt                         #
 ###################################################################
@@ -172,20 +173,13 @@ if [ -x $HOME/dotfiles/.git-autocomplete.sh ]; then
    source $HOME/dotfiles/.git-autocomplete.sh;
 fi
 
-export NVM_DIR="$HOME/.nvm"
-export PATH=$NVM_DIR/current/bin:$PATH
-export MANPATH=$NVM_DIR/current/share/man:$MANPATH
-export NVM_SYMLINK_CURRENT=true
-nvm() {
-   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-   nvm "${@}"
-}
-export PATH=${PATH}:./node_modules/.bin
-
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
 [ -f /mnt/c/dev/bethel/digital-publishing-services/node_modules/tabtab/.completions/serverless.bash ] && . /mnt/c/dev/bethel/digital-publishing-services/node_modules/tabtab/.completions/serverless.bash
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [ -f /mnt/c/dev/bethel/digital-publishing-services/node_modules/tabtab/.completions/sls.bash ] && . /mnt/c/dev/bethel/digital-publishing-services/node_modules/tabtab/.completions/sls.bash
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
