@@ -60,14 +60,6 @@ if [ -f ~/.bash_aliases_local ]; then
     source ~/.bash_aliases_local
 fi
 
-rmcache () {
-   pushd ~/jworg-cs/content-core/
-   rm -rf ~/jworg-cs/.sscache/* ~/jworg-cs/.sscache/.cache*
-   php cli.php CacheResetTask --entire
-   popd
-}
-
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
