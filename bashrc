@@ -72,11 +72,6 @@ if [ -d "$HOME/bin" ] ; then
    PATH="$HOME/bin:$PATH"
 fi
 
-# Git autocompletion
-if [ -d ~/cms-team/settings/ ]; then
-   source ~/cms-team/settings/git-completion.sh
-fi
-
 # Custom aliases
 alias gitco='bgit -p ~/jworg-cs --verbose --checkout'
 alias gitup='bgit -p ~/jworg-cs --verbose --update'
