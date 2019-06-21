@@ -140,9 +140,9 @@ export -f parse_git_dirty
 export -f parse_git_branch
 export -f get_user_name_if_different
 
-ps1_username_color="\[\033[38;5;28m\]"
+ps1_username_color="\[\033[38;5;41m\]"
 ps1_dir_color="\[\033[38;5;33m\]"
-ps1_branch_color="\[\033[38;5;245m\]"
+ps1_branch_color="\[\033[38;5;250m\]"
 ps1_no_color="\[\e[m\]"
 
 export PS1="$ps1_username_color\`get_user_name_if_different\`\h:$ps1_dir_color\W$ps1_branch_color\`parse_git_branch\`$ps1_no_color\\$ "
