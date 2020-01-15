@@ -1,8 +1,6 @@
-alias ll="ls -la"
-
-rmd() {
-   pandoc $1 | lynx -stdin
-}
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 updateMergeBase() {
    MERGE_BASE=$(git merge-base $(git rev-parse --abbrev-ref --symbolic-full-name @{u}) $(git rev-parse --abbrev-ref HEAD))
@@ -14,11 +12,10 @@ safeRebase() {
 }
 
 assumeRole() {
-   eval $( $(which assume-role) $@);
+   eval $(assume-role --duration 9h $1)
 }
 
-slsLogs ()
-{
+slsLogs () {
     LOGS_FN="$1";
     shift;
     sls logs -t -f "${LOGS_FN}" --startTime "$(gdate -u +'%Y-%m-%dT%H:%M:%SZ' -d '3 min ago')" $@
@@ -27,7 +24,5 @@ slsLogs ()
 function docker-tags() {
    curl https://registry.hub.docker.com/v1/repositories/$1/tags | jq -r '.[].name';
 }
-
-alias gruntw="grunt && grunt watch"
 
 alias https="http --default-scheme=https"

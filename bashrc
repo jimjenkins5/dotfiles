@@ -51,13 +51,13 @@ export SVN_EDITOR=vim
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/.bash_aliases ]; then
-   . ~/.bash_aliases
+if [ -f ~/.aliases ]; then
+   . ~/.aliases
 fi
 
 # Load bash aliases that won't be copied to the git repo
-if [ -f ~/.bash_aliases_local ]; then
-    source ~/.bash_aliases_local
+if [ -f ~/.aliases_local ]; then
+    source ~/.aliases_local
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -160,13 +160,3 @@ if [ -x $HOME/dotfiles/.git-autocomplete.sh ]; then
    source $HOME/dotfiles/.git-autocomplete.sh;
 fi
 
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[ -f /mnt/c/dev/bethel/digital-publishing-services/node_modules/tabtab/.completions/serverless.bash ] && . /mnt/c/dev/bethel/digital-publishing-services/node_modules/tabtab/.completions/serverless.bash
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[ -f /mnt/c/dev/bethel/digital-publishing-services/node_modules/tabtab/.completions/sls.bash ] && . /mnt/c/dev/bethel/digital-publishing-services/node_modules/tabtab/.completions/sls.bash
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
