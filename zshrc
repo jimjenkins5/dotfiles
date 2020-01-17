@@ -2,7 +2,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/jpjenkins/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -65,13 +65,11 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR='vim'
 
-export ARCHFLAGS="-arch x86_64"
-
-if [ -f ~/.bash_aliases ]; then
-   . ~/.aliases
+if [ -f $HOME/.aliases ]; then
+   source $HOME/.aliases
 fi
 
 # Load bash aliases that won't be copied to the git repo
-if [ -f ~/._aliases_local ]; then
-    source ~/.aliases_local
+if [ -f $HOME/.aliases_local ]; then
+    source $HOME/.aliases_local
 fi
