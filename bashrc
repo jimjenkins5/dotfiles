@@ -151,6 +151,7 @@ export GOPATH="$HOME/go"
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 export PATH=$PATH:"$HOME/Library/Python/2.7/bin"
 export PATH=$PATH:"./node_modules/.bin"
+export PATH=$PATH:"$HOME/.local/bin"
 ###################################################################
 #                   End My Awesome Prompt                         #
 ###################################################################
