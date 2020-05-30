@@ -1,34 +1,47 @@
 #!/usr/bin/env bash
 ############################
 # .make.sh
-# This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
+# This script creates symlinks from the home directory to any desired dotfiles in $HOME/dotfiles
 ############################
 
 ########## Variables
 
-dir=~/dotfiles                    # dotfiles directory
-olddir=~/dotfiles_old             # old dotfiles backup directory
-files="tmux.conf tmux.osx.conf tmux.2.0.conf tmux.2.1.conf bashrc bash_profile zshrc aliases vimrc vim tmux gitconfig gitignore_global dircolors nvmrc editorconfig"    # list of files/folders to symlink in homedir
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+BACKUP_DIR="$HOME/dotfiles_backup"             # old dotfiles backup directory
+filesToSave=".tmux.conf .tmux.osx.conf .bashrc .bash_profile .vimrc .vim .gitconfig .nvmrc .editorconfig"    # list of files/folders to symlink in homedir
 
 ##########
 
 # create dotfiles_old in homedir
-echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
-mkdir -p $olddir
-echo "done"
-
-# change to the dotfiles directory
-echo -n "Changing to the $dir directory ..."
-cd $dir
+echo -n "Creating ${BACKUP_DIR} for backup of any existing dotfiles in ~ ..."
+mkdir -p $BACKUP_DIR
 echo "done"
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
-for file in $files; do
-    echo "Moving any existing dotfiles from ~ to $olddir"
-    mv ~/.$file ~/dotfiles_old/
-    echo "Creating symlink to $file in home directory."
-    ln -s $dir/$file ~/.$file
+echo "Moving any existing dotfiles from ${HOME} to ${BACKUP_DIR}"
+for file in $filesToSave; do
+   if [ -f "$HOME/$file" ] || [ -d "$HOME/$file" ]; then
+      echo "Backing up file ${file}";
+      mv "${HOME}/${file}" "${BACKUP_DIR}/"
+   fi
 done
 
+echo "Creating symlinks for bash files."
+ln -s "${SCRIPT_DIR}/bash/bash_profile" "${HOME}/.bash_profile"
+
+echo "Creating symlinks for editor files."
+ln -s "${SCRIPT_DIR}/editors/vim" "${HOME}/.vim"
+ln -s "${SCRIPT_DIR}/editors/vimrc" "${HOME}/.vimrc"
+ln -s "${SCRIPT_DIR}/editors/editorconfig" "${HOME}/.editorconfig"
+
+echo "Creating symlinks for git files."
+ln -s "${SCRIPT_DIR}/git/gitconfig" "${HOME}/.gitconfig"
 # ensure that the global gitignore setting is correct (it's an absolute value)
-git config --global core.excludesfile ~/.gitignore_global
+git config --global core.excludesfile "${SCRIPT_DIR}/git/gitignore_global"
+
+echo "creating symlinks for framework files."
+ln -s "${SCRIPT_DIR}/frameworks/nvmrc" "${HOME}/.nvmrc"
+
+echo "creating symlinks for tmux files."
+ln -s "${SCRIPT_DIR}/tmux/tmux.conf" "${HOME}/.tmux.conf"
+ln -s "${SCRIPT_DIR}/tmux/tmux.osx.conf" "${HOME}/.tmux.osx.conf"
