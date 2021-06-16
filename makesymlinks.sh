@@ -28,6 +28,7 @@ done
 
 echo "Creating symlinks for bash files."
 ln -s "${SCRIPT_DIR}/bash/bash_profile" "${HOME}/.bash_profile"
+ln -s "${SCRIPT_DIR}/bash/bashrc" "${HOME}/.bashrc"
 
 echo "Creating symlinks for editor files."
 ln -s "${SCRIPT_DIR}/editors/vim" "${HOME}/.vim"
