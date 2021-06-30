@@ -5,7 +5,7 @@
 [push]
 	default = simple
 [core]
-	excludesfile = /Users/jpjenkins/dotfiles/git/gitignore_global
+	excludesfile = /home/jpjenkins/dotfiles/git/gitignore_global
 [alias]
    # Delete all local branches but master and the current one, only if they are fully merged with master.
    br-delete-useless = "!f(){ git branch | grep -v "master" | grep -v ^* | xargs git branch -d; }; f"
