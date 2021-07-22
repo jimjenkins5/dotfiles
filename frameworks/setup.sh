@@ -19,3 +19,8 @@ if [ -d "${HOME}/.pyenv" ]; then
       eval "$(pyenv init -)"
    fi
 fi
+
+# tfenv (Terraform) setup
+if [ -d "${HOME}/.tfenv" ]; then
+   export PATH="$HOME/.tfenv/bin:$PATH"
+fi
