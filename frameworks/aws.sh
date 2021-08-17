@@ -1,7 +1,10 @@
 # For awsume (https://awsu.me)
+unalias awsume 2>/dev/null
+unalias AWS 2>/dev/null
 
 if [ $(command -v awsume) ]; then
    AWSUME_COMMAND="awsume"
+
    # If pyenv is installed, we need to alias awsume command to the full path of the awsume
    # file before re-aliasing it as `. awsume`. Otherwise, pyenv will error when looking for
    # the script using '. awsume' as the name.
@@ -24,9 +27,3 @@ if [ $(command -v awsume) ]; then
    complete -F _awsume awsume
    complete -F _awsume AWS
 fi
-
-# TODO: I should really be using awsume, so I should remove this when I setup awsume in
-# my workflow.
-assumeRole() {
-   eval $(assume-role --duration 9h $1)
-}
