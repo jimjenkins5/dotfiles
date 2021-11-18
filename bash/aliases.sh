@@ -9,4 +9,4 @@ alias ag='ag --pager="less -r"'
 alias https="http --default-scheme=https"
 
 # weather in bash
-alias weather="curl wttr.in/10987"
+alias weather="curl wttr.in/19104"
