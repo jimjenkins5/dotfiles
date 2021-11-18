@@ -3,7 +3,7 @@
 	name = Jim Jenkins
 	email = jimjenkins5@gmail.com
 [push]
-	default = simple
+	default = current
 [core]
 	excludesfile = /Users/jpjenkins/dotfiles/git/gitignore_global
 [alias]
