@@ -20,3 +20,8 @@ fi
 if [ -d "${HOME}/.tfenv" ]; then
    export PATH="$HOME/.tfenv/bin:$PATH"
 fi
+
+# mysql client needs to be added to path separately from other homebrew
+if [ -d "${HOMEBREW_PREFIX}/opt/mysql-client" ]; then
+  export PATH="${HOMEBREW_PREFIX}/opt/mysql-client/bin:$PATH"
+fi
