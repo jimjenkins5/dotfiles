@@ -24,6 +24,7 @@ source "${DOTFILES_DIR}/bash/serverless.sh"
 
 # Setup miscellanious alliases
 source "${DOTFILES_DIR}/bash/aliases.sh"
+source "${DOTFILES_DIR}/bash/utilities.sh"
 
 # Load bash aliases that won't be copied to the git repo
 if [ -f "$HOME/.aliases_local" ]; then
