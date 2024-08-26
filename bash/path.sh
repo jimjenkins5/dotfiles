@@ -25,3 +25,8 @@ fi
 if [ -d "${HOMEBREW_PREFIX}/opt/mysql-client" ]; then
   export PATH="${HOMEBREW_PREFIX}/opt/mysql-client/bin:$PATH"
 fi
+
+# dart cli tools
+if [ -d "${HOME}/.pub-cache" ]; then
+  export PATH="${PATH}:${HOME}/.pub-cache/bin"
+fi

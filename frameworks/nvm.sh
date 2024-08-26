@@ -1,6 +1,6 @@
 export NVM_DIR="${HOME}/.nvm"
 # node.js setup
-export NODE_ENV=user-custom
+export NODE_ENV=development
 # ensure the NVM_DIR exists, otherwise nvm will error, even on install.
 mkdir -p "${NVM_DIR}"
 
