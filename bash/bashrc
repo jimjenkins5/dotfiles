@@ -1,3 +1,2 @@
 source "${HOME}/dotfiles/bash/profile.sh"
 
-source $HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh

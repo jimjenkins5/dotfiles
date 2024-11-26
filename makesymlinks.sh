@@ -6,7 +6,7 @@
 
 ########## Variables
 
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+SCRIPT_DIR="$HOME/dotfiles"
 BACKUP_DIR="$HOME/dotfiles_backup"             # old dotfiles backup directory
 filesToSave=".tmux.conf .tmux.osx.conf .bashrc .bash_profile .vimrc .vim .gitconfig .nvmrc .editorconfig"    # list of files/folders to symlink in homedir
 

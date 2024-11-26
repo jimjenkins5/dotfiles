@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
-export DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../" >/dev/null 2>&1 && pwd )"
+# export DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../" >/dev/null 2>&1 && pwd )"
+export DOTFILES_DIR="$HOME/dotfiles"
 
 # Setup HomeBrew first so that we have the environment variables of other paths.
 source "${DOTFILES_DIR}/frameworks/homebrew.sh"

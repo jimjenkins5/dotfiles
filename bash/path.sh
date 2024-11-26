@@ -30,3 +30,18 @@ fi
 if [ -d "${HOME}/.pub-cache" ]; then
   export PATH="${PATH}:${HOME}/.pub-cache/bin"
 fi
+
+# flutter
+if [ -d "${HOME}/tooling/flutter" ]; then
+  export PATH="${PATH}:${HOME}/tooling/flutter/bin"
+fi
+
+# mongo tools
+if [ -d "${HOME}/tooling/mongodb" ]; then
+  export PATH="${PATH}:${HOME}/tooling/mongodb/bin"
+fi
+
+# Add RVM to PATH for scripting.
+if [ -d "${HOME}/.rvm/bin" ]; then
+  export PATH="${HOME}/.rvm/bin:${PATH}"
+fi
