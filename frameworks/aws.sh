@@ -2,6 +2,7 @@
 unalias awsume 2>/dev/null
 unalias AWS 2>/dev/null
 
+# Setup awsume command and autocomplete if installed
 if [ $(command -v awsume) ]; then
    AWSUME_COMMAND="awsume"
 
@@ -27,3 +28,16 @@ if [ $(command -v awsume) ]; then
    complete -F _awsume awsume
    complete -F _awsume AWS
 fi
+
+# Setup assume if installed
+if [ $(command -v assume) ]; then
+  function assume {
+    source assume $@
+    # Serverless (SLS) fails when AWS_PROFILE is set, so we unset it here
+    unset AWS_PROFILE
+  }
+fi
+
+# Alias to unset AWS environment variables
+alias unsetAWS='unset $(env | grep AWS | grep -v AWS_REGION | grep -v AWS_DEFAULT_REGION | sed '\''s|=.*||'\'')'
+
